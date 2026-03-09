@@ -1,0 +1,71 @@
+---- TEST 1 (Generic Bot) ----
+{
+  "score": 65,
+  "flag": "YELLOW",
+  "ml_fake_probability": 0.57,
+  "reasons": [
+    "Low-information generic review",
+    "Highly generic structure (vague adjectives, no specific nouns)"
+  ]
+}
+
+---- TEST 2 (Genuine details) ----
+{
+  "score": 65,
+  "flag": "YELLOW",
+  "ml_fake_probability": 0.78,
+  "reasons": [
+    "High ML fake probability"
+  ]
+}
+
+DEBUG: Rating received: 5
+DEBUG: Rating received: 5
+---- TEST 1 (Superlative Spam) ----
+{
+  "score": 55,
+  "flag": "YELLOW",
+  "ml_fake_probability": 0.73,
+  "reasons": [
+    "Extremely emotional language",
+    "Overly promotional wording (excessive superlatives)",
+    "Excessive positivity for maximum rating"
+  ]
+}
+
+---- TEST 2 (Genuine details) ----
+{
+  "score": 65,
+  "flag": "YELLOW",
+  "ml_fake_probability": 0.78,
+  "reasons": [
+    "High ML fake probability"
+  ]
+}
+
+DEBUG: Rating received: 5
+DEBUG: Rating received: 5
+
+
+---- TEST 1 (Positive Hype) ----
+{
+  "score": 80,
+  "flag": "GREEN",
+  "ml_fake_probability": 0.73,
+  "reasons": [
+    "Overly promotional wording (excessive superlatives)"
+  ]
+}
+
+---- TEST 2 (Negative Mismatch) ----
+{
+  "score": -5,
+  "flag": "RED",
+  "ml_fake_probability": 0.92,
+  "reasons": [
+    "High ML fake probability",
+    "Highly generic structure (vague adjectives, no specific nouns)",
+    "Extremely emotional language",
+    "Negative text but high rating"
+  ]
+}
